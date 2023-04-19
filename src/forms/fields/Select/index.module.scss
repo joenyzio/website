@@ -48,7 +48,7 @@
       top: 50%;
       right: var(--base);
       transform: translate3d(0, -50%, 0);
-      
+
       .arrow {
         // margin-left: base(0.5);
         transform: rotate(90deg);
@@ -58,7 +58,7 @@
 
     .rs__indicator {
       padding: 0px 4px;
-      
+
       svg path {
         fill: var(--theme-elevation-700);
       }
@@ -91,8 +91,8 @@
     }
 
     .rs__option {
-      font-size: 1rem;
-      padding: calc(var(--base) / 2) var(--base);
+      font-size: 0.85rem;
+      padding: calc(var(--base) / 4) var(--base);
 
       &--is-focused {
         background-color: var(--theme-elevation-100);
