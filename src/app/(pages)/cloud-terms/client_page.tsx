@@ -21,7 +21,7 @@ export const TermsClientPage: React.FC = () => {
           <p>
             Thank you for choosing Payload CMS and our cloud offering to serve your content
             management and application hosting needs. This document is the Agreement (“Agreement”)
-            including all terms and conditions for the Website and Services at
+            includi/ng all terms and conditions for the Website and Services at
             https://payloadcms.com also referred to as (“Services”). This Agreement is between
             Payload CMS, INC, a Delaware Incorporated company, which we refer to as “Payload”, “us”,
             “we”, or “our” and the User, referred to as “you”. By creating an account (“Account”) to
@@ -280,8 +280,9 @@ export const TermsClientPage: React.FC = () => {
           <p>
             For the duration of this Agreement Payload may publicly display your tradenames, logos
             and trademarks as customers on our website and in marketing materials. You may notify us
-            with written trademark usage guides following the contact section and we will comply in
-            a reasonable business
+            with written trademark usage guidelines following the contact section. To opt out from
+            this part of the agreement you must email info@payloacms.com and state that you do not
+            want to be used as a reference.
           </p>
 
           <h2>Aggregate Data</h2>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service | Payload Cloud',
   description: 'Payload Cloud Terms of Service',
   openGraph: mergeOpenGraph({
-    url: '/cloud/terms',
+    url: '/cloud-terms',
   }),
 }
 
