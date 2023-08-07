@@ -1,5 +1,5 @@
-import { Button } from '@components/Button'
 import React from 'react'
+import { CloseIcon } from '@root/icons/CloseIcon'
 
 import classes from './index.module.scss'
 
@@ -15,8 +15,12 @@ export const Message: React.FC<{
   warning?: string | null
   className?: string
   margin?: boolean
+  cta?: {
+    label: string
+    route: string
+  }
   dismissable?: boolean
-}> = ({ error, success, warning, className, margin, dismissable }) => {
+}> = ({ error, success, warning, className, margin, dismissable, cta }) => {
   // const type = error ? 'error' : success ? 'success' : 'warning'
   // const Icon = icons[type]
 
@@ -42,11 +46,17 @@ export const Message: React.FC<{
             <Icon />
           </div>
         )} */}
-        <p className={classes.label}>{label}</p>
+        <p className={classes.label}>
+          {label}
+          {cta && ' '}
+          <a className={classes.cta} href={cta?.route}>
+            {cta?.label}
+          </a>
+        </p>
         {dismissable && (
-          <p className={classes.dismissable} onClick={() => setDismissed(true)}>
-            Dismiss
-          </p>
+          <button className={classes.dismissable} onClick={() => setDismissed(true)}>
+            <CloseIcon />
+          </button>
         )}
       </div>
     )

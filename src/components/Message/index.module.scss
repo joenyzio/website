@@ -108,8 +108,14 @@ $curve: cubic-bezier(.165, .84, .44, 1);
 }
 
 .dismissable {
-  text-align: right;
+  background: none;
+  border: none;
+  padding: 0;
   margin: 0;
-  text-decoration: underline;
   cursor: pointer;
+
+  svg {
+    width: var(--base);
+    height: var(--base);
+  }
 }
