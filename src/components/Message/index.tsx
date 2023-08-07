@@ -1,3 +1,4 @@
+import { Button } from '@components/Button'
 import React from 'react'
 
 import classes from './index.module.scss'
@@ -14,13 +15,15 @@ export const Message: React.FC<{
   warning?: string | null
   className?: string
   margin?: boolean
-}> = ({ error, success, warning, className, margin }) => {
+  dismissable?: boolean
+}> = ({ error, success, warning, className, margin, dismissable }) => {
   // const type = error ? 'error' : success ? 'success' : 'warning'
   // const Icon = icons[type]
 
+  const [dismissed, setDismissed] = React.useState(false)
   const label = error || success || warning
 
-  if (label) {
+  if (!dismissed && label) {
     return (
       <div
         className={[
@@ -40,6 +43,11 @@ export const Message: React.FC<{
           </div>
         )} */}
         <p className={classes.label}>{label}</p>
+        {dismissable && (
+          <p className={classes.dismissable} onClick={() => setDismissed(true)}>
+            Dismiss
+          </p>
+        )}
       </div>
     )
   }
