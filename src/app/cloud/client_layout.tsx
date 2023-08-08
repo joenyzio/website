@@ -6,6 +6,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import { Breadcrumb, Breadcrumbs } from '@components/Breadcrumbs'
 import { Gutter } from '@components/Gutter'
 import { Message } from '@components/Message'
+import { SubscriptionMessage } from '@components/SubscriptionMessage'
 import { useAuthRedirect } from '@root/utilities/use-auth-redirect'
 import { usePathnameSegments } from '@root/utilities/use-pathname-segments'
 import { Tabs } from './_components/Tabs'
@@ -111,6 +112,7 @@ const DashboardHeader = () => {
   return (
     <Fragment>
       <Gutter>
+        {project && <SubscriptionMessage {...project} />}
         <Message error={errorParam} success={successParam} warning={warningParam} />
         <Breadcrumbs
           items={segments.reduce((acc: Breadcrumb[], segment, index) => {
